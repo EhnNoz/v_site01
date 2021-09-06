@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en", dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>VoD Content</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <h1>VoD List</h1>
+    {% for content in vod %}
+        <h2><a href="#">{{ content.title }}</a></h2>
+        <p>{{ content.snippet }}</p>
+        <p>{{ content.imdb_rate }}</p>
+    {% endfor %}
+
+</body>
+</html>
